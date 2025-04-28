@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuble, Jaymie Margaret C.</title>
+    <source src="https://freesound.org/data/previews/346/346168_5121236-lq.mp3" type="audio/mpeg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary-color: #4a3a2a;
+            --secondary-color: #8b6f4e;
+            --text-color: #3c2f2f;
+            --background-color: #f4e4bc;
+            --card-background: #fff8e7;
+            --accent-color: #8b0000;
+            --parchment-color: #f9e5bc;
+            --aged-paper: #e6d5b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'EB Garamond', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: #f0e6d2;
+            padding: 2rem 1rem;
+            text-align: center;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23b4a181' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+            position: relative;
+            border-bottom: 8px solid var(--secondary-color);
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--secondary-color),
+                var(--secondary-color) 10px,
+                var(--primary-color) 10px,
+                var(--primary-color) 20px
+            );
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        nav {
+            background-color: #3c2f2f;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: slideInDown 0.8s ease-out;
+        }
+        
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: #f0e6d2;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        nav ul li a:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 2px solid var(--secondary-color);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(to bottom, transparent 30px, rgba(255, 243, 205, 0.2) 30px, rgba(255, 243, 205, 0.2) 31px, transparent 31px);
+            background-size: 100% 32px;
+            pointer-events: none;
+        }
+        
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            border-bottom: 3px double var(--secondary-color);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background-color: var(--accent-color);
+            animation: slideInRight 1.5s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes slideInRight {
+            from { left: -100%; }
+            to { left: 0; }
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            background-color: var(--secondary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            width: 45%;
+            padding: 1.5rem;
+            background-color: var(--parchment-color);
+            border: 2px solid var(--secondary-color);
+            border-radius: 4px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            transform: translateX(-30px);
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 55%;
+            transform: translateX(30px);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+            pointer-events: none;
+        }
+        
+        .timeline-item::before {
+            content: attr(data-date);
+            position: absolute;
+            background-color: var(--accent-color);
+            color: #f0e6d2;
+            padding: 0.5rem 1rem;
+            border-radius: 2px;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            top: -1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-item:hover::before {
+            transform: scale(1.05);
+        }
+        
+        .timeline-item:nth-child(odd)::before {
+            right: -1rem;
+        }
+        
+        .timeline-item:nth-child(even)::before {
+            left: -1rem;
+        }
+        
+        .timeline-item h3 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .timeline-item h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.5s ease;
+        }
+        
+        .timeline-item:hover h3::after {
+            width: 100%;
+        }
+        
+        .significance {
+            background-color: var(--aged-paper);
+            padding: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            margin: 1.5rem 0;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(-20px);
+            opacity: 0;
+            transition: all 0.6s ease-out;
+        }
+        
+        .significance.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .significance h3 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .significance h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.5s ease;
+        }
+        
+        .significance:hover h3::after {
+            width: 100%;
+        }
+        
+        .significance ul li {
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.5s ease;
+        }
+        
+        .significance.visible ul li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .significance.visible ul li:nth-child(1) { transition-delay: 0.1s; }
+        .significance.visible ul li:nth-child(2) { transition-delay: 0.2s; }
+        .significance.visible ul li:nth-child(3) { transition-delay: 0.3s; }
+        .significance.visible ul li:nth-child(4) { transition-delay: 0.4s; }
+        .significance.visible ul li:nth-child(5) { transition-delay: 0.5s; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background-color: var(--card-background);
+            padding: 1.5rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid var(--secondary-color);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.5s ease;
+        }
+        
+        .card:hover h3::after {
+            width: 100%;
+        }
+        
+        .route-map {
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.8s ease;
+        }
+        
+        .route-map.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .route-map::before {
+            content: 'MARE INCOGNITUM';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .route-map.visible::before {
+            opacity: 1;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+        
+        .route-map img {
+            max-width: 100%;
+            height: auto;
+            border: 4px solid var(--secondary-color);
+            border-radius: 2px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            filter: sepia(30%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        
+        .route-map:hover img {
+            filter: sepia(10%);
+            transform: scale(1.02);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: #f0e6d2;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-family: 'Playfair Display', serif;
+            border-top: 4px double var(--secondary-color);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        footer.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        footer p:last-child {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+            transition-delay: 0.3s;
+        }
+        
+        footer.visible p:last-child {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 50px;
+            }
+            
+            .timeline-item::before {
+                left: 0 !important;
+                right: auto !important;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+        .reveal-word {
+            opacity: 0;
+            transform: translateY(10px);
+            display: inline-block;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Ship animation */
+        .timeline-ship {
+            position: absolute;
+            left: 50%; 
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: top 0.5s ease, opacity 0.5s ease;
+            z-index: 10;
+        }
+        
+        /* Compass rose */
+        .compass-rose {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0.7;
+            transition: transform 0.5s ease;
+            z-index: 10;
+        }
+        
+        /* Card flip effect */
+        .card {
+            perspective: 1000px;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: transform 0.8s ease;
+            padding: 1.5rem;
+        }
+        
+        .card-back {
+            transform: rotateY(180deg);
+            background-color: var(--aged-paper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .card.flipped .card-front {
+            transform: rotateY(180deg);
+        }
+        
+        .card.flipped .card-back {
+            transform: rotateY(0deg);
+        }
+        
+        /* Ocean wave animation */
+        .ocean-wave {
+            position: relative;
+            height: 50px;
+            overflow: hidden;
+        }
+        
+        .wave-layer-1, .wave-layer-2, .wave-layer-3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23f0e6d2" opacity="0.25"/></svg>') repeat-x;
+            background-size: 25% 100%;
+            animation: wave 12s linear infinite;
+        }
+        
+        .wave-layer-2 {
+            animation: wave 8s linear infinite;
+            opacity: 0.5;
+            background-size: 40% 100%;
+        }
+        
+        .wave-layer-3 {
+            animation: wave 6s linear infinite;
+            opacity: 0.3;
+            background-size: 35% 100%;
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Map reveal animation */
+        .map-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-reveal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background-color);
+            transform: translateX(0);
+            transition: transform 1.5s cubic-bezier(0.77, 0, 0.18, 1);
+        }
+        
+        .map-reveal-overlay.reveal {
+            transform: translateX(100%);
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            animation: float 2s ease-in-out infinite;
+            transition: opacity 0.5s ease;
+            z-index: 9;
+        }
+        
+        .scroll-arrow {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        
+        /* Starry background */
+        .starry-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+        
+        /* Timeline highlight effect */
+        .timeline-highlight {
+            transform: scale(1.05) !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+            border-width: 3px !important;
+            z-index: 5 !important;
+        }
+        
+        .timeline-highlight::before {
+            background-color: var(--primary-color) !important;
+            transform: scale(1.1) !important;
+        }
+        
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(240, 230, 210, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--secondary-color);
+            animation: spin 1s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+        
+        .preloader p {
+            color: #f0e6d2;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    
+        nav ul li a.active {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        nav ul li a.active::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+            }
+            
+            nav ul li {
+                width: 100%;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 0.8rem;
+                text-align: center;
+            }
+        }
+
+        .floating-ship {
+            position: absolute;
+            bottom: 30px;
+            left: -100px;
+            animation: shipSail 30s linear infinite;
+            z-index: 5;
+        }
+        
+        @keyframes shipSail {
+            0% { left: -100px; transform: translateY(0); }
+            50% { left: calc(100% + 100px); transform: translateY(-15px); }
+            50.01% { left: -100px; transform: translateY(0); }
+            100% { left: calc(100% + 100px); transform: translateY(-15px); }
+        }
+        
+        .timeline-progress {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 0;
+            background-color: var(--accent-color);
+            transform: translateX(-50%);
+            z-index: 1;
+            transition: height 0.3s ease-out;
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--accent-color); }
+        }
+        
+        .typewrite-wrapper {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: 
+                typewriter 2s steps(40, end) forwards,
+                blink-caret 0.75s step-end infinite;
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .sea-creatures {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .sea-creature {
+            position: absolute;
+            bottom: 20px;
+            opacity: 0.7;
+            animation-name: swim;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes swim {
+            0% { transform: translateX(-100px) translateY(0) rotate(0deg); }
+            50% { transform: translateX(calc(100vw + 100px)) translateY(-20px) rotate(10deg); }
+            50.01% { transform: translateX(-100px) translateY(-10px) rotate(0deg); }
+            100% { transform: translateX(calc(100vw + 100px)) translateY(0) rotate(-5deg); }
+        }
+
+        .card-3d-wrapper {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d-inner {
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d-inner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .animated-globe {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .animated-globe.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .globe-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4a86e8, #388e3c);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .globe-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(
+                transparent 20%, 
+                rgba(255, 255, 255, 0.2) 25%, 
+                transparent 30%
+            );
+            animation: overlay-rotate 8s linear infinite;
+        }
+        
+        .globe-route {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        
+        .globe-route::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-color);
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes overlay-rotate {
+            from { transform: rotate(45deg); }
+            to { transform: rotate(405deg); }
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 300px;
+            opacity: 0.07;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .parallax-bg.map-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%234a3a2a' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .parallax-bg.ship-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 20L60 30L20 30L30 20z M25 30L25 50L55 50L55 30z M30 50L50 60L30 60z' stroke='%238b6f4e' fill='none' /%3E%3C/svg%3E");
+        }
+        
+        .parallax-bg.compass-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%238b6f4e' stroke-width='1'/%3E%3Cline x1='50' y1='10' x2='50' y2='90' stroke='%238b6f4e' stroke-width='1'/%3E%3Cline x1='10' y1='50' x2='90' y2='50' stroke='%238b6f4e' stroke-width='1'/%3E%3C/svg%3E");
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 4px;
+            background-color: var(--aged-paper);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: #f0e6d2;
+            border: 2px solid var(--secondary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        
+        .sound-toggle:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .sound-toggle.active {
+            background-color: var(--accent-color);
+        }
+
+        .magnifier {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .magnifying-glass {
+            position: absolute;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: none;
+            display: none;
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="scroll-arrow">↓</div>
+        <div class="scroll-text">Scroll to Explore</div>
+        <h1>The First Voyage Around the World</h1>
+        <div class="floating-ship">
+            <svg width="80" height="60" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100,20 L110,40 L10,40 L20,20 Z" fill="#8b6f4e"/>
+            <path d="M60,5 L60,40" stroke="#8b6f4e" stroke-width="3"/>
+            <path d="M20,40 L100,40 L90,60 L30,60 Z" fill="#8b6f4e"/>
+            <path d="M60,5 A10,10 0 0,1 70,15 A10,10 0 0,1 60,25 A10,10 0 0,1 50,15 A10,10 0 0,1 60,5" fill="#f4e4bc"/>
+            </svg>
+        </div>
+        <div class="compass-rose">
+            <svg width="80" height="80" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="80" fill="none" stroke="#f0e6d2" stroke-width="2"/>
+                <path d="M100,20 L100,180 M20,100 L180,100" stroke="#f0e6d2" stroke-width="2"/>
+                <path d="M30,30 L170,170 M30,170 L170,30" stroke="#f0e6d2" stroke-width="2"/>
+                <text x="100" y="15" text-anchor="middle" fill="#f0e6d2" font-family="'Playfair Display', serif">N</text>
+                <text x="185" y="100" text-anchor="middle" fill="#f0e6d2" font-family="'Playfair Display', serif">E</text>
+                <text x="100" y="190" text-anchor="middle" fill="#f0e6d2" font-family="'Playfair Display', serif">S</text>
+                <text x="15" y="100" text-anchor="middle" fill="#f0e6d2" font-family="'Playfair Display', serif">W</text>
+                <circle cx="100" cy="100" r="10" fill="#8b0000"/>
+                <circle cx="100" cy="100" r="5" fill="#f0e6d2"/>
+            </svg>
+        </div>
+        
+        <p>Ferdinand Magellan's Historic Expedition (1519-1522)</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#expedition">The Expedition</a></li>
+            <li><a href="#philippines">Philippine Encounter</a></li>
+            <li><a href="#significance">Historical Significance</a></li>
+            <li><a href="#sources">Primary Sources</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="overview" class="section">
+            <h2>Overview</h2>
+            <p>The first voyage around the world, initiated by Ferdinand Magellan in 1519, stands as one of history's most remarkable maritime expeditions. This journey proved that the Earth was indeed round and that the oceans were interconnected, forever changing our understanding of the planet.</p>
+            
+            <div class="route-map">
+                <img src="https://www.madmaps.com/cdn/shop/files/magellans_journey_printable8.5x11-reduced_1024x1024.jpg?v=1716608301" alt="Map of Magellan's Voyage Route">
+                <p><small>Map showing the complete route of the first circumnavigation of Earth</small></p>
+            </div>
+        </section>
+        
+        <section id="expedition" class="section">
+            <h2>The Expedition</h2>
+            <div class="timeline">
+                <div class="timeline-progress"></div>
+                <div class="timeline-item" data-date="September 20, 1519">
+                    <h3>Departure from Spain</h3>
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80,20 L60,40 L20,40 L20,60 L80,60 Z" fill="#8b6f4e"/>
+                        <path d="M50,20 L50,40" stroke="#8b6f4e" stroke-width="5"/>
+                        <circle cx="50" cy="40" r="5" fill="#f4e4bc"/>
+                    </svg>
+                    <p>Ferdinand Magellan sets sail from Sanlúcar de Barrameda with five ships: Trinidad, San Antonio, Concepción, Victoria, and Santiago.</p>
+                </div>
+                
+                <div class="timeline-item" data-date="November 28, 1520">
+                    <h3>Discovery of the Magellan Strait</h3>
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80,20 L60,40 L20,40 L20,60 L80,60 Z" fill="#8b6f4e"/>
+                        <path d="M50,20 L50,40" stroke="#8b6f4e" stroke-width="5"/>
+                        <circle cx="50" cy="40" r="5" fill="#f4e4bc"/>
+                    </svg>
+                    <p>The expedition discovers the strait connecting the Atlantic and Pacific Oceans, later named after Magellan.</p>
+                </div>
+                
+                <div class="timeline-item" data-date="March 16, 1521">
+                    <h3>Arrival in the Philippines</h3>
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80,20 L60,40 L20,40 L20,60 L80,60 Z" fill="#8b6f4e"/>
+                        <path d="M50,20 L50,40" stroke="#8b6f4e" stroke-width="5"/>
+                        <circle cx="50" cy="40" r="5" fill="#f4e4bc"/>
+                    </svg>
+                    <p>Magellan reaches the island of Homonhon in the Philippines, marking the first European contact with the archipelago.</p>
+                </div>
+                
+                <div class="timeline-item" data-date="April 27, 1521">
+                    <h3>Battle of Mactan</h3>
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80,20 L60,40 L20,40 L20,60 L80,60 Z" fill="#8b6f4e"/>
+                        <path d="M50,20 L50,40" stroke="#8b6f4e" stroke-width="5"/>
+                        <circle cx="50" cy="40" r="5" fill="#f4e4bc"/>
+                    </svg>
+                    <p>Ferdinand Magellan is killed in the Battle of Mactan by the warriors of Lapu-Lapu, the chieftain of Mactan Island.</p>
+                </div>
+                
+                <div class="timeline-item" data-date="September 6, 1522">
+                    <h3>Return to Spain</h3>
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80,20 L60,40 L20,40 L20,60 L80,60 Z" fill="#8b6f4e"/>
+                        <path d="M50,20 L50,40" stroke="#8b6f4e" stroke-width="5"/>
+                        <circle cx="50" cy="40" r="5" fill="#f4e4bc"/>
+                    </svg>
+                    <p>The Victoria, commanded by Juan Sebastián Elcano, completes the first circumnavigation of the world, arriving back in Spain.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="philippines" class="section">
+            <h2>The Philippine Encounter</h2>
+            <p>The arrival of Magellan's expedition in the Philippines marked a pivotal moment in Philippine history. The encounter between the Spanish explorers and the indigenous peoples led to complex interactions of trade, diplomacy, and conflict.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>First Mass</h3>
+                    <p>On March 31, 1521, the first Catholic Mass in the Philippines was celebrated on the island of Limasawa.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Blood Compact</h3>
+                    <p>Magellan performed a blood compact with Rajah Humabon of Cebu, establishing a friendship alliance.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Battle of Mactan</h3>
+                    <p>Lapu-Lapu's victory over Magellan represented early resistance against foreign colonization.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="significance" class="section">
+            <h2>Historical Significance</h2>
+            <div class="significance">
+                <h3>Global Impact</h3>
+                <ul>
+                    <li>Proved Earth's spherical nature through practical navigation</li>
+                    <li>Established the true size of Earth and its oceans</li>
+                    <li>Opened new trade routes between Europe and Asia</li>
+                    <li>Initiated the Spanish colonial period in the Philippines</li>
+                    <li>Led to cultural exchanges between East and West</li>
+                </ul>
+            </div>
+            
+            <div class="significance">
+                <h3>Philippine Context</h3>
+                <ul>
+                    <li>Introduced Christianity to the Philippines</li>
+                    <li>Marked the beginning of three centuries of Spanish colonization</li>
+                    <li>Created lasting cultural influences in Filipino society</li>
+                    <li>Positioned the Philippines as a key hub in global trade networks</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="sources" class="section">
+            <h2>Primary Historical Sources</h2>
+            <p>Our understanding of the first voyage around the world comes primarily from:</p>
+            
+            <div class="grid">
+                <div class="card-front"></div>
+                <div class="card-back"></div>
+                <div class="card">
+                    <h3>Antonio Pigafetta's Journal</h3>
+                    <p>The most comprehensive firsthand account of the voyage, written by a Venetian scholar who accompanied Magellan.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Ship Logs</h3>
+                    <p>Navigation records and logs from the Victoria, the only ship to complete the circumnavigation.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Spanish Archives</h3>
+                    <p>Official documents and correspondence related to the expedition's planning and execution.</p>
+                </div>
+            </div>
+            
+            <div class="significance">
+                <p><strong>Note:</strong> These primary sources form the foundation of Philippine history readings about the first circumnavigation, providing invaluable insights into this transformative period.</p>
+            </div>
+        </section>
+        
+        <h2>Expedition Statistics</h2>
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="5">5</div>
+                <div class="stat-label">Ships at Start</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="270">270</div>
+                <div class="stat-label">Crew Members</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="1">1</div>
+                <div class="stat-label">Ships Returned</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="18">18</div>
+                <div class="stat-label">Survivors</div>
+            </div>
+        </div>
+
+        <div class="magnifier">
+            <div class="magnifying-glass"></div>
+        </div>
+        
+        <div class="globe-image"></div>
+        <div class="globe-overlay"></div>
+        <div class="globe-route"></div>
+        <div class="animated-globe"></div>
+        <div class="parallax-bg map-pattern"></div>
+        <div class="parallax-bg ship-pattern"></div>
+    </div>
+
+    <script>
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+        rect.bottom >= 0
+    );
+}
+
+// Function to handle scroll animations
+function handleScrollAnimations() {
+    // Animate sections
+    document.querySelectorAll('.section').forEach(section => {
+        if (isInViewport(section) && !section.classList.contains('visible')) {
+            section.classList.add('visible');
+        }
+    });
+    
+    // Animate timeline items
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        if (isInViewport(item) && !item.classList.contains('visible')) {
+            item.classList.add('visible');
+        }
+    });
+    
+    // Animate significance sections
+    document.querySelectorAll('.significance').forEach(sig => {
+        if (isInViewport(sig) && !sig.classList.contains('visible')) {
+            sig.classList.add('visible');
+        }
+    });
+    
+    // Animate cards
+    document.querySelectorAll('.card').forEach(card => {
+        if (isInViewport(card) && !card.classList.contains('visible')) {
+            card.classList.add('visible');
+        }
+    });
+    
+    // Animate route map
+    document.querySelectorAll('.route-map').forEach(map => {
+        if (isInViewport(map) && !map.classList.contains('visible')) {
+            map.classList.add('visible');
+        }
+    });
+    
+    // Animate footer
+    const footer = document.querySelector('footer');
+    if (isInViewport(footer) && !footer.classList.contains('visible')) {
+        footer.classList.add('visible');
+    }
+}
+
+// Smooth scroll function for navigation links
+function setupSmoothScroll() {
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Update active link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - 70, // Offset for the sticky nav
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+// Function to add interactive features to timeline items
+function setupTimelineInteractions() {
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.zIndex = '10';
+            this.style.transform = this.classList.contains('visible') ? 
+                (this.offsetLeft < window.innerWidth / 2 ? 'translateX(-20px) scale(1.03)' : 'translateX(20px) scale(1.03)') : 
+                'translateX(0)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.zIndex = '1';
+            this.style.transform = this.classList.contains('visible') ? 
+                (this.offsetLeft < window.innerWidth / 2 ? 'translateX(-30px)' : 'translateX(30px)') : 
+                'translateX(0)';
+        });
+    });
+}
+
+// Function to highlight the current section in navigation
+function updateActiveNavOnScroll() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+    
+    window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+}
+
+// Function to add parallax effect to the header
+function setupParallaxHeader() {
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const scrollPosition = window.pageYOffset;
+        
+        if (scrollPosition <= 600) {
+            header.style.backgroundPositionY = scrollPosition * 0.4 + 'px';
+        }
+    });
+}
+
+// Add mobile navigation toggle
+function setupMobileNav() {
+    // Create mobile menu button
+    const nav = document.querySelector('nav');
+    const mobileMenuBtn = document.createElement('button');
+    mobileMenuBtn.innerHTML = '☰';
+    mobileMenuBtn.classList.add('mobile-menu-btn');
+    mobileMenuBtn.style.display = 'none';
+    
+    // Add styles for the button
+    mobileMenuBtn.style.background = 'var(--primary-color)';
+    mobileMenuBtn.style.border = '1px solid var(--secondary-color)';
+    mobileMenuBtn.style.color = '#f0e6d2';
+    mobileMenuBtn.style.padding = '0.5rem 1rem';
+    mobileMenuBtn.style.fontSize = '1.5rem';
+    mobileMenuBtn.style.cursor = 'pointer';
+    mobileMenuBtn.style.display = 'none';
+    mobileMenuBtn.style.marginBottom = '1rem';
+    
+    // Insert before nav list
+    nav.insertBefore(mobileMenuBtn, nav.firstChild);
+    
+    // Get nav list
+    const navList = document.querySelector('nav ul');
+    
+    // Function to check window width and toggle menu visibility
+    function checkWidth() {
+        if (window.innerWidth <= 768) {
+            mobileMenuBtn.style.display = 'block';
+            navList.style.display = 'none';
+            nav.style.textAlign = 'center';
+        } else {
+            mobileMenuBtn.style.display = 'none';
+            navList.style.display = 'flex';
+        }
+    }
+    
+    // Toggle menu on button click
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navList.style.display === 'none' || navList.style.display === '') {
+            navList.style.display = 'flex';
+            mobileMenuBtn.innerHTML = '✕';
+        } else {
+            navList.style.display = 'none';
+            mobileMenuBtn.innerHTML = '☰';
+        }
+    });
+    
+    // Hide menu when clicking a link (mobile)
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navList.style.display = 'none';
+                mobileMenuBtn.innerHTML = '☰';
+            }
+        });
+    });
+    
+    // Check width on load and resize
+    window.addEventListener('load', checkWidth);
+    window.addEventListener('resize', checkWidth);
+}
+
+// Function to add interactive map features
+function setupMapInteraction() {
+    const map = document.querySelector('.route-map img');
+    if (map) {
+        map.addEventListener('mouseenter', function() {
+            this.style.animation = 'pulse 2s infinite';
+        });
+        
+        map.addEventListener('mouseleave', function() {
+            this.style.animation = 'none';
+        });
+    }
+}
+
+// Add a simple preloader
+function setupPreloader() {
+    const preloader = document.createElement('div');
+    preloader.classList.add('preloader');
+    preloader.innerHTML = `
+        <div class="loading-spinner"></div>
+        <p>Embarking on a voyage through history...</p>
+    `;
+    
+    // Add styles for preloader
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    document.body.appendChild(preloader);
+    
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            
+            // Start animations after preloader disappears
+            setTimeout(handleScrollAnimations, 500);
+        }, 1500);
+    });
+}
+
+// Add back to top button
+function setupBackToTop() {
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.innerHTML = '↑';
+    backToTopBtn.classList.add('back-to-top');
+    backToTopBtn.setAttribute('title', 'Back to Top');
+    
+    // Add styles for the button
+    backToTopBtn.style.position = 'fixed';
+    backToTopBtn.style.bottom = '20px';
+    backToTopBtn.style.right = '20px';
+    backToTopBtn.style.background = 'var(--accent-color)';
+    backToTopBtn.style.color = '#f0e6d2';
+    backToTopBtn.style.border = 'none';
+    backToTopBtn.style.borderRadius = '50%';
+    backToTopBtn.style.width = '50px';
+    backToTopBtn.style.height = '50px';
+    backToTopBtn.style.fontSize = '20px';
+    backToTopBtn.style.cursor = 'pointer';
+    backToTopBtn.style.display = 'none';
+    backToTopBtn.style.opacity = '0';
+    backToTopBtn.style.transition = 'opacity 0.3s ease';
+    backToTopBtn.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.2)';
+    
+    document.body.appendChild(backToTopBtn);
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
+            setTimeout(() => {
+                backToTopBtn.style.opacity = '1';
+            }, 50);
+        } else {
+            backToTopBtn.style.opacity = '0';
+            setTimeout(() => {
+                backToTopBtn.style.display = 'none';
+            }, 300);
+        }
+    });
+    
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Add active class to CSS
+function addActiveStyleToCSS() {
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+}
+
+// Initialize all functions
+function initializeAll() {
+    // Add preloader first
+    setupPreloader();
+    
+    // Add necessary styles
+    addActiveStyleToCSS();
+    
+    // Set up all interactive features
+    document.addEventListener('DOMContentLoaded', function() {
+        setupSmoothScroll();
+        setupTimelineInteractions();
+        updateActiveNavOnScroll();
+        setupParallaxHeader();
+        setupMobileNav();
+        setupMapInteraction();
+        setupBackToTop();
+        
+        // Initial check for animations
+        handleScrollAnimations();
+        
+        // Add scroll event listener for animations
+        window.addEventListener('scroll', handleScrollAnimations);
+    });
+}
+
+// Run initialization
+initializeAll();
+
+// 1. Text Reveal Animation for Paragraphs
+function setupTextRevealAnimations() {
+    // Target all paragraph elements within sections
+    document.querySelectorAll('.section p:not(.route-map p)').forEach((paragraph, index) => {
+        // Split paragraph into individual words
+        const content = paragraph.textContent;
+        const words = content.split(' ');
+        
+        // Replace paragraph content with wrapped words
+        paragraph.innerHTML = words.map(word => 
+            `<span class="reveal-word">${word}</span>`
+        ).join(' ');
+        
+        // Add the animation reveal class when the paragraph is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate each word with a slight delay between them
+                    paragraph.querySelectorAll('.reveal-word').forEach((word, i) => {
+                        setTimeout(() => {
+                            word.style.opacity = '1';
+                            word.style.transform = 'translateY(0)';
+                        }, i * 20); // 20ms delay between each word
+                    });
+                    observer.unobserve(paragraph);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(paragraph);
+    });
+}
+
+// 2. Ship Animation for Timeline
+function addShipAnimation() {
+    // Create a ship element that will navigate along the timeline
+    const ship = document.createElement('div');
+    ship.classList.add('timeline-ship');
+    
+    // Add the ship to the timeline
+    const timeline = document.querySelector('.timeline');
+    timeline.appendChild(ship);
+    
+    // Set up the animation triggers
+    window.addEventListener('scroll', () => {
+        const timelineRect = timeline.getBoundingClientRect();
+        const timelineTop = timelineRect.top;
+        const timelineHeight = timelineRect.height;
+        const windowHeight = window.innerHeight;
+        
+        // Calculate progress through the timeline (0 to 1)
+        let progress = 0;
+        if (timelineTop < windowHeight && timelineTop + timelineHeight > 0) {
+            progress = Math.min(1, Math.max(0, 
+                (windowHeight - timelineTop) / (windowHeight + timelineHeight)
+            ));
+        }
+        
+        // Position the ship based on progress
+        const shipPosition = progress * (timelineHeight - 40); // 40 is ship height
+        ship.style.top = `${shipPosition}px`;
+        
+        // Make the ship visible when timeline is in view
+        ship.style.opacity = timelineTop < windowHeight ? '1' : '0';
+    });
+}
+
+// 3. Compass Rose Animation
+function addCompassRoseAnimation() {
+    // Create and add the compass rose to the header
+    const header = document.querySelector('header');
+    const compass = document.createElement('div');
+    compass.classList.add('compass-rose');
+    
+    header.appendChild(compass);
+    
+    // Add animation behavior
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        // Rotate the compass based on scroll position
+        compass.style.transform = `rotate(${scrollY / 10}deg)`;
+    });
+}
+
+// 4. Card Flip Animation
+function setupCardFlipEffects() {
+    // Get all cards
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        // Create front and back elements
+        const content = card.innerHTML;
+        card.innerHTML = '';
+        
+        const front = document.createElement('div');
+        front.classList.add('card-front');
+        front.innerHTML = content;
+        
+        const back = document.createElement('div');
+        back.classList.add('card-back');
+        back.innerHTML = `
+            <div class="card-back-content">
+                <h4>Did you know?</h4>
+                <p>Additional fascinating fact related to ${card.querySelector('h3') ? card.querySelector('h3').textContent : 'this topic'}.</p>
+            </div>
+        `;
+        
+        // Add custom facts based on card title
+        if (card.querySelector('h3')) {
+            const title = card.querySelector('h3').textContent;
+            if (title.includes('First Mass')) {
+                back.querySelector('p').textContent = 'The exact location of the first Mass is still debated among historians, with both Limasawa and Masao, Butuan as possible sites.';
+            } else if (title.includes('Blood Compact')) {
+                back.querySelector('p').textContent = 'This ritual, known as "Sandugo" in Filipino, involved drinking a small amount of each others blood mixed with wine';
+            } else if (title.includes('Battle of Mactan')) {
+                back.querySelector('p').textContent = 'Lapu-Lapu is considered the first Filipino hero for his resistance against foreign invasion.';
+            } else if (title.includes('Pigafetta')) {
+                back.querySelector('p').textContent = 'Pigafettas manuscript was lost for centuries before being rediscovered in the 18th century.'  
+            } else if (title.includes('Ship Logs')) {
+                back.querySelector('p').textContent = 'Only 18 of the original 270 crew members survived the entire journey.';
+            } else if (title.includes('Spanish Archives')) {
+                back.querySelector('p').textContent = 'Many documents related to the expedition are preserved in the Archive of the Indies in Seville, Spain.';
+            }
+        }
+        
+        // Append front and back to card
+        card.appendChild(front);
+        card.appendChild(back);
+        
+        // Add flip interaction
+        card.addEventListener('click', function() {
+            this.classList.toggle('flipped');
+        });
+    });
+}
+
+// 5. Ocean Wave Animation for Footer
+function addOceanWaveAnimation() {
+    const footer = document.querySelector('footer');
+    const wave = document.createElement('div');
+    wave.classList.add('ocean-wave');
+    
+    // Create multiple wave layers
+    for (let i = 1; i <= 3; i++) {
+        const waveLayer = document.createElement('div');
+        waveLayer.classList.add(`wave-layer-${i}`);
+        wave.appendChild(waveLayer);
+    }
+    
+    // Insert before the first element in footer
+    footer.insertBefore(wave, footer.firstChild);
+}
+
+// 6. Animated Image Reveal for Map
+function enhanceMapAnimation() {
+    const routeMap = document.querySelector('.route-map');
+    if (routeMap) {
+        const img = routeMap.querySelector('img');
+        
+        // Create overlay mask
+        const mapOverlay = document.createElement('div');
+        mapOverlay.classList.add('map-reveal-overlay');
+        
+        // Replace direct image with masked setup
+        if (img) {
+            const imgParent = img.parentNode;
+            const imgWrapper = document.createElement('div');
+            imgWrapper.classList.add('map-wrapper');
+            img.parentNode.insertBefore(imgWrapper, img);
+            imgWrapper.appendChild(img);
+            imgWrapper.appendChild(mapOverlay);
+            
+            // Setup observer for map reveal animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        mapOverlay.classList.add('reveal');
+                        observer.unobserve(imgWrapper);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(imgWrapper);
+        }
+    }
+}
+
+// 7. Animated Scroll Indicator
+function addScrollIndicator() {
+    const indicator = document.createElement('div');
+    indicator.classList.add('scroll-indicator');
+    
+    // Add to container
+    document.querySelector('.container').prepend(indicator);
+    
+    // Hide on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            indicator.style.opacity = '0';
+            setTimeout(() => {
+                indicator.style.display = 'none';
+            }, 500);
+        }
+    });
+}
+
+// 8. Add Star Background to Header
+function addStarryBackground() {
+    const header = document.querySelector('header');
+    const stars = document.createElement('div');
+    stars.classList.add('starry-background');
+    
+    // Generate random stars
+    for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDelay = `${Math.random() * 3}s`;
+        stars.appendChild(star);
+    }
+    
+    // Insert at beginning of header
+    header.insertBefore(stars, header.firstChild);
+}
+
+// 9. Add Animated Highlight for Current Timeline Item
+function enhanceTimelineHighlight() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    window.addEventListener('scroll', () => {
+        timelineItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            const isOptimal = 
+                rect.top >= 0 && 
+                rect.top <= window.innerHeight * 0.5;
+            
+            if (isOptimal) {
+                item.classList.add('timeline-highlight');
+            } else {
+                item.classList.remove('timeline-highlight');
+            }
+        });
+    });
+}
+
+
+// Initialize all new animations
+function initializeNewAnimations() {
+    // Add required CSS first
+    addAnimationStyles();
+    
+    // Setup individual animations
+    document.addEventListener('DOMContentLoaded', function() {
+        setupTextRevealAnimations();
+        addShipAnimation();
+        addCompassRoseAnimation();
+        setupCardFlipEffects();
+        addOceanWaveAnimation();
+        enhanceMapAnimation();
+        addScrollIndicator();
+        addStarryBackground();
+        enhanceTimelineHighlight();
+        
+        // Trigger initial animations
+        handleScrollAnimations();
+    });
+}
+
+// Run the initialization
+initializeNewAnimations();
+
+https://www.madmaps.com/cdn/shop/files/magellans_journey_printable8.5x11-reduced_1024x1024.jpg?v=1716608301 
+
+// 1. Floating Ship Animation for Header
+function addFloatingShipToHeader() {
+    const header = document.querySelector('header');
+    const ship = document.createElement('div');
+    ship.classList.add('floating-ship');
+    
+    // Add styles for the floating ship
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    header.appendChild(ship);
+}
+
+// 2. Animated Timeline Progress Bar
+function addTimelineProgressBar() {
+    const timeline = document.querySelector('.timeline');
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('timeline-progress');
+    
+    // Add styles for the progress bar
+    const style = document.createElement('style');
+
+    
+    document.head.appendChild(style);
+    timeline.appendChild(progressBar);
+    
+    // Update progress bar height on scroll
+    window.addEventListener('scroll', function() {
+        const timelineRect = timeline.getBoundingClientRect();
+        const timelineTop = timelineRect.top;
+        const timelineHeight = timelineRect.height;
+        const windowHeight = window.innerHeight;
+        
+        if (timelineTop < windowHeight && (timelineTop + timelineHeight) > 0) {
+            // Calculate visible percentage
+            let visiblePercentage = 0;
+            
+            if (timelineTop < 0) {
+                visiblePercentage = Math.min(100, Math.abs(timelineTop) / timelineHeight * 100);
+            } else {
+                visiblePercentage = Math.min(100, (windowHeight - timelineTop) / timelineHeight * 100);
+            }
+            
+            // Update progress bar height
+            progressBar.style.height = `${visiblePercentage}%`;
+        }
+    });
+}
+
+// 3. Typewriter Effect for Section Titles
+function addTypewriterEffect() {
+    // Add styles for typewriter effect
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    
+    // Apply to section titles
+    document.querySelectorAll('.section h2').forEach((heading) => {
+        const text = heading.textContent;
+        heading.innerHTML = '';
+        
+        const wrapper = document.createElement('span');
+        wrapper.classList.add('typewrite-wrapper');
+        wrapper.textContent = text;
+        heading.appendChild(wrapper);
+        
+        // Observer to trigger animation when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    wrapper.style.animation = 'typewriter 2s steps(40, end) forwards, blink-caret 0.75s step-end 8';
+                    observer.unobserve(heading);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(heading);
+    });
+}
+
+// 4. Animated Sea Creatures in Footer
+function addSeaCreatures() {
+    const footer = document.querySelector('footer');
+    const creaturesContainer = document.createElement('div');
+    creaturesContainer.classList.add('sea-creatures');
+    
+    // Add styles for sea creatures
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    
+    // Create several sea creatures
+    const creatures = [
+        { duration: '25s', delay: '0s', size: 30, yPos: 30 },
+        { duration: '32s', delay: '5s', size: 20, yPos: 60 },
+        { duration: '40s', delay: '10s', size: 25, yPos: 40 }
+    ];
+    
+    creatures.forEach((creature, index) => {
+        const creatureEl = document.createElement('div');
+        creatureEl.classList.add('sea-creature');
+        
+        // Create SVG for creature
+        creatureEl.innerHTML = `
+            <svg width="${creature.size}" height="${creature.size}" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40,15 C40,7 30,0 20,0 C10,0 0,7 0,15 C0,23 10,30 20,30 C30,30 40,23 40,15 Z" fill="#f0e6d2" fill-opacity="0.7"/>
+                <circle cx="30" cy="10" r="3" fill="#3c2f2f"/>
+                <path d="M40,15 L50,10 L40,5 Z" fill="#f0e6d2" fill-opacity="0.7"/>
+            </svg>  
+        `;
+        
+        // Set animation properties
+        creatureEl.style.animation = `swim ${creature.duration} ease-in-out ${creature.delay} infinite`;
+        creatureEl.style.bottom = `${creature.yPos}px`;
+        
+        creaturesContainer.appendChild(creatureEl);
+    });
+    
+    footer.appendChild(creaturesContainer);
+}
+
+// 5. 3D Card Tilt Effect
+function add3DCardTiltEffect() {
+    // Add styles for 3D effect
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    
+    // Apply to cards
+    document.querySelectorAll('.card').forEach(card => {
+        // Wrap card contents in 3D wrapper
+        card.classList.add('card-3d-wrapper');
+        
+        const inner = document.createElement('div');
+        inner.classList.add('card-3d-inner');
+        
+        // Move card contents to inner wrapper
+        while (card.firstChild) {
+            inner.appendChild(card.firstChild);
+        }
+        
+        card.appendChild(inner);
+        
+        // Add tilt effect
+        card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            const deltaX = (e.clientX - centerX) / (rect.width / 2);
+            const deltaY = (e.clientY - centerY) / (rect.height / 2);
+            
+            inner.style.transform = `rotateY(${deltaX * 5}deg) rotateX(${-deltaY * 5}deg)`;
+            inner.style.boxShadow = `${-deltaX * 5}px ${-deltaY * 5}px 20px rgba(0,0,0,0.2)`;
+        });
+        
+        // Reset on mouse leave
+        card.addEventListener('mouseleave', function() {
+            inner.style.transform = 'rotateY(0) rotateX(0)';
+            inner.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        });
+    });
+}
+
+// 6. Animated Globe in Significance Section
+function addAnimatedGlobe() {
+    const significance = document.querySelector('#significance');
+    const globe = document.createElement('div');
+    globe.classList.add('animated-globe');
+    
+    // Add styles for globe
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    
+    // Add globe to significance section
+    significance.appendChild(globe);
+    
+    // Show globe when significance section is visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                globe.classList.add('visible');
+                observer.unobserve(significance);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    observer.observe(significance);
+}
+
+// 7. Animated Background Parallax for Sections
+function addParallaxBackgroundToSections() {
+    // Add styles for parallax backgrounds
+    const style = document.createElement('style');
+
+    
+    document.head.appendChild(style);
+    
+    // Apply to sections
+    document.querySelectorAll('.section').forEach((section, index) => {
+        // Create parallax background
+        const parallaxBg = document.createElement('div');
+        parallaxBg.classList.add('parallax-bg');
+        
+        // Alternate background patterns
+        if (index % 3 === 0) {
+            parallaxBg.classList.add('map-pattern');
+        } else if (index % 3 === 1) {
+            parallaxBg.classList.add('ship-pattern');
+        } else {
+            parallaxBg.classList.add('compass-pattern');
+        }
+        
+        // Wrap section content
+        const content = document.createElement('div');
+        content.classList.add('parallax-content');
+        
+        // Move section content to wrapper
+        while (section.firstChild) {
+            content.appendChild(section.firstChild);
+        }
+        
+        section.appendChild(parallaxBg);
+        section.appendChild(content);
+        
+        // Add parallax effect on scroll
+        window.addEventListener('scroll', function() {
+            const rect = section.getBoundingClientRect();
+            const scrollY = window.scrollY;
+            
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                const speed = index % 2 === 0 ? 0.05 : -0.05;
+                parallaxBg.style.transform = `translateY(${scrollY * speed}px)`;
+            }
+        });
+    });
+}
+
+// 8. Animated Number Counter
+function addAnimatedCounters() {
+    // Add a statistics section before the significance section
+    const significanceSection = document.querySelector('#significance');
+    const statsSection = document.createElement('section');
+    statsSection.id = 'stats';
+    statsSection.classList.add('section');
+    
+    // Add styles for stats
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    
+    // Insert before significance section
+    significanceSection.parentNode.insertBefore(statsSection, significanceSection);
+    
+    // Animate number counting
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target > 100 ? 10 : 1;
+        const duration = 2000; // 2 seconds
+        const steps = Math.ceil(target / increment);
+        const stepTime = duration / steps;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current > target) {
+                element.textContent = target;
+                clearInterval(timer);
+            } else {
+                element.textContent = current;
+            }
+        }, stepTime);
+    }
+    
+    // Observe stat section and start animation when visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                statNumbers.forEach(statEl => {
+                    const target = parseInt(statEl.getAttribute('data-target'));
+                    animateCounter(statEl, target);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    observer.observe(statsSection);
+}
+
+// 9. Atmospheric Sound Effects (Optional - User-Triggered)
+function addAtmosphericSounds() {
+    // Create sound toggle button
+    const soundBtn = document.createElement('button');
+    soundBtn.classList.add('sound-toggle');
+    soundBtn.innerHTML = '🔇';
+    soundBtn.setAttribute('title', 'Toggle Ambient Sound');
+    
+    // Add styles for sound button
+    const style = document.createElement('style');
+    
+    document.head.appendChild(style);
+    document.body.appendChild(soundBtn);
+    
+    // Create audio elements
+    const oceanSound = document.createElement('audio');
+    oceanSound.loop = true;
+    oceanSound.volume = 0.2;
+    oceanSound.innerHTML = `
+        <source src="https://freesound.org/data/previews/346/346168_5121236-lq.mp3" type="audio/mpeg">
+    `;
+    
+    document.body.appendChild(oceanSound);
+    
+    // Toggle sound on button click
+    soundBtn.addEventListener('click', function() {
+        if (oceanSound.paused) {
+            oceanSound.play().catch(e => console.log("Audio play failed:", e));
+            this.innerHTML = '🔊';
+            this.classList.add('active');
+        } else {
+            oceanSound.pause();
+            this.innerHTML = '🔇';
+            this.classList.remove('active');
+        }
+    });
+}
+
+// 10. Interactive Magnifying Glass Effect for Map
+function addMagnifyingGlassToMap() {
+    const mapImg = document.querySelector('.route-map img');
+    if (!mapImg) return;
+    
+    // Create magnifying glass elements
+    const magnifier = document.createElement('div');
+    magnifier.classList.add('magnifier');
+    
+    const glass = document.createElement('div');
+    glass.classList.add('magnifying-glass');
+    
+    // Add styles for magnifying glass
+    const style = document.createElement('style');
+    
+    
+    document.head.appendChild(style);
+    
+    // Replace direct image with magnifier setup
+    const parent = mapImg.parentNode;
+    parent.appendChild(magnifier);
+    magnifier.appendChild(mapImg);
+    magnifier.appendChild(glass);
+    
+    // Setup magnifying glass behavior
+    magnifier.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        
+        // Calculate mouse position relative to image
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        if (x < rect.width && y < rect.height && x > 0 && y > 0) {
+            glass.style.display = 'block';
+            glass.style.left = `${x - 50}px`; // 50 is half the glass width
+            glass.style.top = `${y - 50}px`; // 50 is half the glass height
+            
+            // Set background position to create magnifying effect
+            const bgX = x * 100 / rect.width;
+            const bgY = y * 100 / rect.height;
+            
+            glass.style.backgroundImage = `url(${mapImg.src})`;
+            glass.style.backgroundSize = `${rect.width * 2}px ${rect.height * 2}px`;
+            glass.style.backgroundPosition = `${-x * 2 + 50}px ${-y * 2 + 50}px`;
+        }
+    });
+    
+    magnifier.addEventListener('mouseleave', function() {
+        glass.style.display = 'none';
+    });
+}
+
+// Initialize all new animations
+function initializeCustomAnimations() {
+    document.addEventListener('DOMContentLoaded', function() {
+        addFloatingShipToHeader();
+        addTimelineProgressBar();
+        addTypewriterEffect();
+        addSeaCreatures();
+        add3DCardTiltEffect();
+        addAnimatedGlobe();
+        addParallaxBackgroundToSections();
+        addAnimatedCounters();
+        addAtmosphericSounds();
+        addMagnifyingGlassToMap();
+    });
+}
+
+// Run initialization
+initializeCustomAnimations();
+
+    </script>
+    
+    <footer>
+        <p>© 2025 First Voyage Around the World - Educational Resource - Based on Readings in Philippine History</p>
+        <p>Tuble, Jaymie Margaret C. <br>ACT AD 1</p>
+    </footer>
+</body>
+</html>
